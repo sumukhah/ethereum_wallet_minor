@@ -5,7 +5,7 @@ const getPrivateKey = require("./getPrivateKey");
 const colors = require("colors");
 const moment = require("moment");
 
-const timeLimit = 5000;
+const timeLimit = 3000;
 let isTimeUp = false;
 const foundEthers = [];
 let checkCount = 0;
