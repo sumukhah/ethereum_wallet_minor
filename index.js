@@ -12,7 +12,9 @@ let checkCount = 0;
 
 // starts with 2^0, You can give upto 2^256
 // this is a decimal equivalent
-let currentAddress = BigInt("1158898938490089100834791898982198749187290910012940187629301810397741093829");
+let currentAddress = BigInt(
+  "1150000008490089100822279189898299999909100129777787629301810397741093829"
+);
 
 setTimeout(() => {
   isTimeUp = true;
@@ -21,7 +23,11 @@ setTimeout(() => {
 const generateResult = () => {
   console.log("\n\n\n");
   console.log(colors.bold("FOUND ETHERS IN").magenta);
-  console.table(foundEthers);
+  if (Object.keys(foundEthers).length) {
+    console.table(foundEthers);
+  } else {
+    console.log(colors.bold("NONE").magenta);
+  }
   console.log("\n\n");
   console.log(
     `In ${timeLimit / 1000} seconds, You've checked for ${checkCount} addresses`
