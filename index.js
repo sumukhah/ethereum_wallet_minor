@@ -5,14 +5,14 @@ const getPrivateKey = require("./getPrivateKey");
 const colors = require("colors");
 const moment = require("moment");
 
-const timeLimit = 3000;
+const timeLimit = 300000;
 let isTimeUp = false;
 const foundEthers = [];
 let checkCount = 0;
 
 // starts with 2^0, You can give upto 2^256
 // this is a decimal equivalent
-let currentAddress = "1";
+let currentAddress = BigInt("1158898938490089100834791898982198749187290910012940187629301810397741093829");
 
 setTimeout(() => {
   isTimeUp = true;
@@ -35,11 +35,7 @@ const generateResult = () => {
       timeRequired / BigInt(100)
     } centuries to access 1% wallet addresses...`.bgYellow
   );
-  console.log(
-    `${
-      timeRequired / BigInt(9.46 * 10 ** 15)
-    } light years to complete 1% of search`.bgRed
-  );
+
   console.log("So no luck huh?".red);
 };
 
